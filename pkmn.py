@@ -1,9 +1,12 @@
 type = {"Flingouste": "Eau", "Aflamanoir": "Feu", "Maracachi": "Plante"}
+type2 = ("Sharpedo", "Lugulabre", "Torterra")
 
 def combat(pkmn):
-	
+	return
+
 
 def main():
+	return
 	compteur = 1
 	for i in type:
 		print(compteur, "pour", i)
