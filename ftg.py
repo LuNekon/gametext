@@ -115,7 +115,7 @@ def attack(pv, m_pv, min_stat, max_stat):
 	time.sleep(2)
 	m_pv = m_pv - atk
 	if m_pv <= 0:
-		return pv, m_pv
+		win()
 	return pv, m_pv
 
 
@@ -131,7 +131,7 @@ def fight(pv, min_stat, max_stat, exp):
 		#Attaquer
 		if choice == 1:
 			pv, m_pv = attack(pv, m_pv, min_stat, max_stat)
-			pv = monster_attack(pv, m_pv)
+			pv, m_pv = monster_attack(pv, m_pv)
 			turn += 1
 		#Changer d'arme
 		elif choice == 2:
@@ -178,7 +178,7 @@ def name():
 	time.sleep(1)
 	print("Merci, alors la suite donc..\n")
 	time.sleep(2)
-	fight()
+	initStats()
 
 
 def main():
