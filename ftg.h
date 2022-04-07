@@ -1,13 +1,26 @@
-#ifndef FTG_H
+#ifndef __FTG_H__
+#define __FTG_H__
+#include <stdbool.h>
 
-void win(int *exp, int *pv, int *min_stat, int *max_stat);
+struct character
+{
+    char name;
+    int exp;
+    int pv;
+    int min_stat;
+    int max_stat;
+};
+
+typedef struct character* game; //Crée un type game à partir de la structure character
+
+bool win(game g);
 void run(void);
-void inventory(int *pv);
-void weapon(int *min_stat, int *max_stat);
-void monster_attack(int *pv);
-void attack(int *m_pv, int *min_stat, int *max_stat);
-void fight(int *pv, int *min_stat, int *max_stat, int *exp);
-void initStats(void);
-void name(void);
+void inventory(game g);
+void weapon(game g);
+void monster_attack(game g);
+bool attack(int * m_pv, game g);
+void fight(game g);
+game initStats(void);
+void name(game g);
 
 #endif
