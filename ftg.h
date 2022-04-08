@@ -14,7 +14,7 @@ struct character
 typedef struct character* game; //Crée un type game à partir de la structure character
 
 bool win(game g);
-void run(void);
+void run(game g);
 void inventory(game g);
 void weapon(game g);
 void monster_attack(game g);
